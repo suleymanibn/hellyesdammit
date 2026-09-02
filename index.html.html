@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>工业设备降温与冷却系统 | 源头厂家 · 设计到施工一条龙</title>
+    <meta name="description" content="15年专注工业设备降温与冷却系统工程，源头生产厂家，提供现场勘测、方案设计、设备制造及施工安装一条龙服务。">
+    <meta name="keywords" content="工业冷却系统,设备降温,工业冷水机,车间降温工程,冷却塔">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============ Reset & Base ============ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #F4F6F9;
+            color: #111827;
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; cursor: pointer; border: none; }
+        img, svg { display: block; }
+        .font-num { font-family: 'Roboto Condensed', 'Noto Sans SC', sans-serif; }
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+        /* ============ Icons ============ */
+        .icon-16 { width: 16px; height: 16px; flex-shrink: 0; }
+        .icon-20 { width: 20px; height: 20px; flex-shrink: 0; }
+        .icon-24 { width: 24px; height: 24px; flex-shrink: 0; }
+
+        /* ============ Topbar ============ */
+        .topbar {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 14px;
+            color: #4B5567;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background: #F59E0B; display: inline-block; }
+        .topbar-phone { display: flex; align-items: center; gap: 6px; font-weight: 600; color: #0B2038; transition: color .2s; }
+        .topbar-phone:hover { color: #F59E0B; }
+        @media (min-width: 768px) { .topbar { display: flex; } }
+
+        /* ============ Hero ============ */
+        .hero {
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 900px 500px at 85% -10%, rgba(245,158,11,0.16), transparent 60%),
+                linear-gradient(160deg, #071120 0%, #0B2038 45%, #123A5E 100%);
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0.4;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+        .hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 56px 0 64px;
+        }
+        @media (min-width: 900px) { .hero-inner { grid-template-columns: 1.15fr 0.85fr; padding: 80px 0 96px; } }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.05);
+            border-radius: 999px;
+            padding: 6px 16px;
+            font-size: 12px;
+            color: #CBD9E8;
+            margin-bottom: 28px;
+        }
+        .badge .dot-green { width: 6px; height: 6px; border-radius: 50%; background: #22C55E; display: inline-block; }
+
+        .hero h1 { font-weight: 900; font-size: 30px; line-height: 1.35; color: #fff; }
+        .hero h1 .sub-line { color: #CBD9E8; }
+        @media (min-width: 768px) { .hero h1 { font-size: 44px; line-height: 1.3; } }
+
+        .hero p.subhead { margin-top: 24px; font-size: 16px; color: #A9BCD1; max-width: 560px; line-height: 1.7; }
+        @media (min-width: 768px) { .hero p.subhead { font-size: 18px; } }
+
+        .hero-ctas { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+        @media (min-width: 600px) { .hero-ctas { flex-direction: row; } }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 8px;
+            padding: 14px 26px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background-color .2s, transform .1s;
+            white-space: nowrap;
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-amber { background: #F59E0B; color: #171008; box-shadow: 0 10px 20px -8px rgba(180,110,10,0.45); }
+        .btn-amber:hover { background: #FBBF24; }
+        .btn-outline { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+        .hero-stats { margin-top: 44px; display: flex; align-items: center; gap: 28px; color: #8AA0B8; font-size: 14px; flex-wrap: wrap; }
+        .hero-stats .stat-num { font-size: 24px; font-weight: 700; color: #fff; }
+        .hero-stats .divider { width: 1px; height: 32px; background: rgba(255,255,255,0.1); }
+
+        .hero-art { display: none; }
+        @media (min-width: 900px) { .hero-art { display: block; } }
+        .fin-line { stroke: rgba(255,255,255,0.35); }
+
+        /* ============ Section & Cards ============ */
+        .section { padding: 64px 0; }
+        @media (min-width: 768px) { .section { padding: 80px 0; } }
+        .section-head { max-width: 640px; margin-bottom: 48px; }
+        .section-head h2 { font-weight: 900; font-size: 26px; color: #0B2038; }
+        @media (min-width: 768px) { .section-head h2 { font-size: 30px; } }
+        .section-head p { margin-top: 12px; color: #5B6B7D; }
+        .section-head.light h2 { color: #fff; }
+        .section-head.light p { color: #A9BCD1; }
+
+        .cards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .card { border: 1px solid #E4E9EF; background: #fff; border-radius: 12px; padding: 32px; transition: border-color .2s; }
+        .card:hover { border-color: rgba(245,158,11,0.4); }
+        .card-icon { width: 48px; height: 48px; border-radius: 10px; background: #0B2038; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+        .card h3 { font-weight: 700; font-size: 18px; color: #0B2038; margin-bottom: 12px; }
+        .card p { color: #5B6B7D; font-size: 14px; line-height: 1.7; }
+
+        /* ============ Lead Capture ============ */
+        .lead-section { background: #0B2038; }
+        .lead-card { border-radius: 16px; background: #fff; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); overflow: hidden; display: grid; grid-template-columns: 1fr; }
+        @media (min-width: 768px) { .lead-card { grid-template-columns: 1.3fr 1fr; } }
+        .lead-form { padding: 40px; }
+        @media (min-width: 768px) { .lead-form { padding: 44px; } }
+
+        .field { margin-bottom: 20px; }
+        .field label { display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 6px; }
+        .field input, .field textarea {
+            width: 100%; border: 1px solid #D9DEE5; border-radius: 8px; padding: 11px 14px;
+            font-size: 14px; font-family: inherit; color: #111827; background: #fff; transition: border-color .2s, box-shadow .2s;
+        }
+        .field input:focus, .field textarea:focus { outline: none; border-color: #F59E0B; box-shadow: 0 0 0 3px rgba(245,158,11,0.15); }
+        .field textarea { resize: none; }
+
+        .btn-submit { width: 100%; background: #F59E0B; color: #171008; font-weight: 700; padding: 13px; border-radius: 8px; font-size: 14px; transition: background-color .2s; }
+        .btn-submit:hover { background: #FBBF24; }
+        .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+        .compliance-note { font-size: 12px; color: #9AA5B1; text-align: center; margin-top: 8px; line-height: 1.5; }
+        .form-note { text-align: center; font-size: 12px; color: #16A34A; margin-top: 12px; min-height: 16px; font-weight: 600; }
+
+        .wechat-box { background: #F4F6F9; padding: 40px; display: flex; flex-direction: column; justify-content: center; border-top: 1px solid #E4E9EF; }
+        @media (min-width: 768px) { .wechat-box { border-top: none; border-left: 1px solid #E4E9EF; padding: 44px; } }
+        .wechat-icon-badge { width: 44px; height: 44px; border-radius: 10px; background: #16A34A; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .wechat-box h3 { font-weight: 700; font-size: 18px; color: #0B2038; margin-bottom: 4px; }
+        .wechat-box p { font-size: 14px; color: #5B6B7D; margin-bottom: 20px; }
+
+        .wechat-id-row { display: flex; align-items: center; justify-content: space-between; border: 1px solid #D9DEE5; background: #fff; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
+        .wechat-id-row .label { font-size: 14px; color: #9AA5B1; }
+        .wechat-id-row .id { font-weight: 700; color: #0B2038; letter-spacing: 0.02em; }
+
+        .btn-green { width: 100%; background: #16A34A; color: #fff; font-weight: 700; padding: 13px; border-radius: 8px; font-size: 14px; transition: background-color .2s; }
+        .btn-green:hover { background: #15803D; }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(22,163,74,0.45); }
+            70% { box-shadow: 0 0 0 10px rgba(22,163,74,0); }
+            100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+        }
+        .pulse-btn { animation: pulse-ring 2.2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+        /* ============ Footer & Fixed Bars ============ */
+        .site-footer { max-width: 1180px; margin: 0 auto; padding: 40px 24px; text-align: center; font-size: 12px; color: #9AA5B1; }
+
+        .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 40; background: #fff; border-top: 1px solid #E4E9EF; box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
+        .bottom-bar-inner { max-width: 420px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; }
+        .bar-btn { display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 8px; color: #fff; font-weight: 700; font-size: 14px; padding: 14px 0; transition: background-color .15s; }
+        .bar-btn.call { background: #0B2038; }
+        .bar-btn.call:active { background: #123A5E; }
+        .bar-btn.wechat { background: #16A34A; }
+        .bar-btn.wechat:active { background: #15803D; }
+
+        /* ============ Modal & Toast ============ */
+        .modal-overlay { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; padding: 0 24px; }
+        .modal-overlay.open { display: flex; }
+        @keyframes modal-in { from { opacity: 0; transform: translateY(10px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .modal-card { background: #fff; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 380px; padding: 28px; position: relative; animation: modal-in 0.2s ease-out; }
+        .modal-close { position: absolute; top: 16px; right: 16px; color: #9AA5B1; background: transparent; display: flex; transition: color .15s; }
+        .modal-close:hover { color: #0B2038; }
+        .modal-card h3 { font-weight: 700; font-size: 18px; color: #0B2038; text-align: center; margin-bottom: 4px; }
+        .modal-card p.modal-sub { font-size: 14px; color: #5B6B7D; text-align: center; margin-bottom: 20px; }
+
+        .qr-frame { display: flex; justify-content: center; margin-bottom: 20px; }
+        .qr-box { width: 176px; height: 176px; border-radius: 10px; border: 1px solid #E4E9EF; background: #F4F6F9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .qr-box img { width: 100%; height: 100%; object-fit: contain; }
+        .qr-fallback { display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 12px; color: #9AA5B1; text-align: center; padding: 16px; }
+
+        .toast { position: fixed; bottom: 96px; left: 50%; transform: translateX(-50%); z-index: 60; background: #0B2038; color: #fff; font-size: 14px; padding: 10px 20px; border-radius: 999px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); display: none; }
+        @media (min-width: 768px) { .toast { bottom: 32px; } }
+        .toast.show { display: block; animation: toast-in 0.25s ease-out; }
+        @keyframes toast-in { from { opacity: 0; transform: translate(-50%, 12px); } to { opacity: 1; transform: translate(-50%, 0); } }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="wrap">
+        <div class="topbar">
+            <div class="topbar-left">
+                <span class="dot"></span>
+                <span>专注工业冷却系统工程 15 年</span>
+            </div>
+            <a href="tel:13517490851" class="topbar-phone">
+                <svg class="icon-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.5a1.5 1.5 0 00-1.09-1.443l-4.033-1.153a1.5 1.5 0 00-1.517.39l-1.13 1.13a11.25 11.25 0 01-5.163-5.163l1.13-1.13a1.5 1.5 0 00.39-1.517L8.443 4.34A1.5 1.5 0 007 3.25h-1.5A2.25 2.25 0 003.25 5.5v1.25" />
+                </svg>
+                咨询热线：135-1749-0851
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-grid"></div>
+        <div class="wrap">
+            <div class="hero-inner">
+                <div>
+                    <div class="badge">
+                        <span class="dot-green"></span>
+                        源头生产厂家 · 设计 / 制造 / 施工一体化
+                    </div>
+                    <h1>
+                        工业设备降温与冷却系统<br>
+                        <span class="sub-line">— 源头厂家 · 设计到施工一条龙服务</span>
+                    </h1>
+                    <p class="subhead">
+                        自主研发生产，质量与成本全程可控！为您提供高性价比、高可靠性的工业冷却方案。
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="tel:13517490851" class="btn btn-amber">📞 电话直连工程专家</a>
+                        <button class="btn btn-outline" onclick="openQrModal()">💬 加微信获取定制方案</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div><span class="stat-num font-num">15</span> 年工程经验</div>
+                        <div class="divider"></div>
+                        <div><span class="stat-num font-num">600+</span> 工厂交付案例</div>
+                        <div class="divider"></div>
+                        <div><span class="stat-num font-num">24h</span> 现场响应</div>
+                    </div>
+                </div>
+
+                <!-- Cooling-Fin Vector Artwork -->
+                <div class="hero-art">
+                    <svg viewBox="0 0 340 300" style="width:100%; height:auto;">
+                        <rect x="30" y="30" width="280" height="240" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.14)"/>
+                        <g>
+                            <line class="fin-line" x1="55" y1="60" x2="55" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="85" y1="60" x2="85" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="115" y1="60" x2="115" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="145" y1="60" x2="145" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="175" y1="60" x2="175" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="205" y1="60" x2="205" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="235" y1="60" x2="235" y2="240" stroke-width="2"/>
+                            <line class="fin-line" x1="265" y1="60" x2="265" y2="240" stroke-width="2"/>
+                        </g>
+                        <circle cx="170" cy="150" r="46" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+                        <circle cx="170" cy="150" r="4" fill="#F59E0B"/>
+                        <g stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="170" y1="150" x2="170" y2="112"/>
+                            <line x1="170" y1="150" x2="199" y2="170"/>
+                            <line x1="170" y1="150" x2="141" y2="170"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Advantages -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>核心竞争优势</h2>
+                <p>从源头把控每一环节，让采购与工程决策更安心。</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon-24" style="color:#F59E0B;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5M4.5 3v18M19.5 3v18M4.5 8.25h6M4.5 12.75h6M4.5 17.25h6M13.5 3v18M13.5 8.25h6M13.5 12.75h6M13.5 17.25h6" />
+                        </svg>
+                    </div>
+                    <h3>源头生产厂家</h3>
+                    <p>自有设备制造工厂，无中间商赚差价，成本精准把控，报价更透明、交付更可靠。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon-24" style="color:#F59E0B;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3>全流程工程覆盖</h3>
+                    <p>现场勘测、系统设计、设备生产、工程施工一站式服务，责任到底，无需多方对接。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon-24" style="color:#F59E0B;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3>硬核专业团队</h3>
+                    <p>针对机床、线缆、注塑、化工等不同工业场景，定制极速降温方案，匹配实际工况。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section class="section lead-section">
+        <div class="wrap">
+            <div class="section-head light">
+                <h2>获取免费定制冷却方案</h2>
+                <p>留下您的冷却需求，工程师将在 2 小时内与您联系；或直接添加客服微信，快速沟通。</p>
+            </div>
+
+            <div class="lead-card">
+                <!-- Form -->
+                <form id="leadForm" class="lead-form">
+                    <div class="field">
+                        <label for="leadName">您的姓名</label>
+                        <input type="text" id="leadName" name="name" required placeholder="请输入您的姓名">
+                    </div>
+                    <div class="field">
+                        <label for="leadPhone">联系电话</label>
+                        <input type="tel" id="leadPhone" name="phone" required placeholder="请输入手机号码">
+                    </div>
+                    <div class="field">
+                        <label for="leadMessage">冷却需求描述</label>
+                        <textarea id="leadMessage" name="message" rows="3" placeholder="请简述设备类型、车间面积、现有降温方式等信息"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">提交获取免费报价</button>
+                    <p class="compliance-note">* 提交即视为同意我们联系您。为保证服务质量，电话沟通可能会进行录音。</p>
+                    <p id="formNote" class="form-note"></p>
+                </form>
+
+                <!-- WeChat Card -->
+                <div class="wechat-box">
+                    <div class="wechat-icon-badge">
+                        <svg class="icon-24" style="color:#fff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm3.75 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm3.75 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                        </svg>
+                    </div>
+                    <h3>客服微信</h3>
+                    <p>扫码或复制微信号，1 对 1 工程师为您解答方案与报价。</p>
+
+                    <div class="wechat-id-row">
+                        <span class="label">客服微信：</span>
+                        <span class="id">yuy940301</span>
+                    </div>
+
+                    <button class="btn-green pulse-btn" id="leadCopyBtn" onclick="copyWechatId('leadCopyBtn')">
+                        一键复制微信号
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        本页面信息仅供咨询参考 · 工业冷却系统设计与施工服务
+    </footer>
+
+    <!-- Fixed Bottom Bar for Mobile -->
+    <div class="bottom-bar">
+        <div class="bottom-bar-inner">
+            <a href="tel:13517490851" class="bar-btn call">📞 电话咨询</a>
+            <button class="bar-btn wechat" onclick="openQrModal()">💬 加微信领方案</button>
+        </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div id="qrModalOverlay" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeQrModal()" aria-label="关闭">
+                <svg class="icon-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h3>扫码添加客服微信</h3>
+            <p class="modal-sub">获取定制降温方案与报价</p>
+
+            <div class="qr-frame">
+                <div class="qr-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=yuy940301" alt="微信二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="qr-fallback">二维码加载失败<br>请直接复制微信号添加</div>
+                </div>
+            </div>
+
+            <div class="wechat-id-row">
+                <span class="label">微信号：</span>
+                <span class="id">yuy940301</span>
+            </div>
+
+            <button class="btn-green" id="modalCopyBtn" onclick="copyWechatId('modalCopyBtn')">
+                一键复制微信号
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Component -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        const WECHAT_ID = 'yuy940301';
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function openQrModal() {
+            document.getElementById('qrModalOverlay').classList.add('open');
+        }
+        function closeQrModal() {
+            document.getElementById('qrModalOverlay').classList.remove('open');
+        }
+        document.getElementById('qrModalOverlay').addEventListener('click', function (e) {
+            if (e.target.id === 'qrModalOverlay') closeQrModal();
+        });
+
+        async function copyWechatId(btnId) {
+            try {
+                await navigator.clipboard.writeText(WECHAT_ID);
+            } catch (e) {
+                const ta = document.createElement('textarea');
+                ta.value = WECHAT_ID;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+            }
+            const btn = document.getElementById(btnId);
+            const original = btn.textContent;
+            btn.textContent = '已复制 ✓';
+            showToast('微信号已复制：' + WECHAT_ID);
+            setTimeout(() => { btn.textContent = original; }, 1600);
+        }
+
+        // 请在此处替换为您自己的后端接口，避免直接暴露密钥
+	const SERVERCHAN_URL = 'https://sctapi.ftqq.com/SCT408321T5OVxbX4GSdsIWjBnl7pBWVd1.send';
+
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const form = this;
+            const nameInput = form.querySelector('[name="name"]');
+            const phoneInput = form.querySelector('[name="phone"]');
+            const messageInput = form.querySelector('[name="message"]');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const formNote = document.getElementById('formNote');
+
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const message = messageInput.value.trim();
+
+            formNote.style.color = '';
+            if (!name || !phone) {
+                formNote.textContent = '请填写您的姓名和联系电话后再提交';
+                formNote.style.color = '#DC2626';
+                if (!name) nameInput.focus(); else phoneInput.focus();
+                return;
+            }
+
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = '提交中...';
+            submitBtn.disabled = true;
+            formNote.textContent = '';
+
+            const title = `收到新的客户留资：${name}`;
+            const desp =
+                `### 新客户留资通知\n\n` +
+                `- **姓名**：${name}\n` +
+                `- **电话**：${phone}\n` +
+                `- **需求描述**：${message || '（未填写）'}\n\n` +
+                `> 提交时间：${new Date().toLocaleString('zh-CN')}`;
+
+            try {
+                const response = await fetch(SERVERCHAN_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                    body: new URLSearchParams({ title, desp })
+                });
+
+                const data = await response.json();
+
+                if (data && data.code === 0) {
+                    alert('提交成功！我们会尽快与您联系。');
+                    formNote.textContent = '提交成功，工程师将在 2 小时内与您联系';
+                    showToast('提交成功，我们会尽快联系您');
+                    form.reset();
+                } else {
+                    formNote.textContent = '提交失败，请稍后重试或直接电话联系我们';
+                    formNote.style.color = '#DC2626';
+                }
+            } catch (err) {
+                formNote.textContent = '网络异常，提交失败，请稍后重试或直接电话联系我们';
+                formNote.style.color = '#DC2626';
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
